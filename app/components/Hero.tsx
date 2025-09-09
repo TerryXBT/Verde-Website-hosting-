@@ -13,11 +13,6 @@ export default function Hero() {
             {/* Enhanced Background Elements */}
             <div className="absolute inset-0 bg-gradient-radial from-emerald-100/20 via-transparent to-transparent" />
 
-            {/* Floating Background Elements */}
-            <div className="absolute top-20 left-10 w-32 h-32 bg-emerald-100/30 rounded-full blur-xl animate-pulse" />
-            <div className="absolute bottom-40 right-20 w-24 h-24 bg-blue-100/40 rounded-full blur-lg animate-pulse" style={{ animationDelay: '2s' }} />
-            <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-green-200/20 rounded-full blur-md animate-pulse" style={{ animationDelay: '4s' }} />
-
             {/* Subtle Grid Pattern */}
             <div className="absolute inset-0 opacity-[0.02]" style={{
                 backgroundImage: `radial-gradient(circle at 1px 1px, rgb(0,0,0) 1px, transparent 0)`,
@@ -62,7 +57,7 @@ export default function Hero() {
                             transition={{ duration: 0.6, delay: 0.2 }}
                             className="flex flex-col sm:flex-row gap-4"
                         >
-                            <button className="group relative inline-flex items-center justify-center px-10 py-5 bg-emerald-600 text-white rounded-2xl font-bold text-xl transition-all duration-300 hover:bg-emerald-700 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 shadow-xl hover:shadow-2xl overflow-hidden">
+                            <button className="group relative inline-flex items-center justify-center px-10 py-5 bg-emerald-600 text-white rounded-2xl font-bold text-xl transition-all duration-300 hover:bg-emerald-700 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 shadow-lg hover:shadow-xl overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-700 to-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                 <Image
                                     src="/images/app-store.png"
@@ -74,8 +69,8 @@ export default function Hero() {
                                 <span className="relative z-10">App Store</span>
                             </button>
 
-                            <button className="group relative inline-flex items-center justify-center px-10 py-5 bg-emerald-500 text-white rounded-2xl font-bold text-xl transition-all duration-300 hover:bg-emerald-600 hover:scale-[1.02] hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 shadow-lg overflow-hidden">
-                                <div className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                            <button className="group relative inline-flex items-center justify-center px-10 py-5 bg-white text-emerald-600 rounded-2xl font-bold text-xl transition-all duration-300 hover:bg-gray-100 hover:scale-[1.02] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 shadow-md overflow-hidden border border-emerald-200">
+                                <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                 <Image
                                     src="/images/google-play.svg"
                                     alt="Google Play"
@@ -203,15 +198,7 @@ export default function Hero() {
                                     </div>
                                 </div>
 
-                                {/* Enhanced Glow Effects */}
-                                <div className="absolute inset-0 bg-gradient-to-r from-emerald-400/30 to-blue-400/20 rounded-[3rem] blur-3xl -z-10 scale-110 animate-pulse" />
-                                <div className="absolute -inset-4 bg-gradient-to-r from-emerald-200/10 to-transparent rounded-[4rem] blur-2xl -z-20" />
-
-                                {/* Floating particles */}
-                                <div className="absolute top-10 left-5 w-2 h-2 bg-emerald-300/60 rounded-full animate-bounce" style={{ animationDelay: '0s', animationDuration: '3s' }} />
-                                <div className="absolute top-32 right-8 w-1.5 h-1.5 bg-blue-300/60 rounded-full animate-bounce" style={{ animationDelay: '1s', animationDuration: '4s' }} />
-                                <div className="absolute bottom-20 left-12 w-1 h-1 bg-green-300/60 rounded-full animate-bounce" style={{ animationDelay: '2s', animationDuration: '5s' }} />
-                            </motion.div>
+                                </motion.div>
                         </motion.div>
                     </div>
                 </div>

@@ -23,13 +23,7 @@ const testimonials = [
   }
 ];
 
-const partners = [
-  "City of Melbourne",
-  "EPA Victoria",
-  "Sustainability Victoria",
-  "Melbourne University",
-  "RMIT Sustainability"
-];
+
 
 export default function Testimonials() {
   return (
@@ -104,31 +98,7 @@ export default function Testimonials() {
           ))}
         </div>
 
-        {/* Partners Section */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center"
-        >
-          <p className="text-sm text-gray-500 mb-8 font-medium">TRUSTED BY LEADING ORGANIZATIONS</p>
-          
-          <div className="flex flex-wrap justify-center items-center gap-8 sm:gap-12 opacity-60">
-            {partners.map((partner, index) => (
-              <motion.div
-                key={partner}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 0.6 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-gray-600 font-medium text-sm sm:text-base hover:opacity-100 transition-opacity duration-200"
-              >
-                {partner}
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+        
       </div>
     </section>
   );
