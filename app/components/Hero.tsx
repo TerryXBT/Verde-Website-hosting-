@@ -35,7 +35,7 @@ export default function Hero() {
                                 Your Carbon,
                                 <br />
                                 <span className="text-emerald-600 bg-gradient-to-r from-emerald-600 to-emerald-500 bg-clip-text text-transparent">
-                                    Your Persona.
+                                    Your Verde.
                                 </span>
                             </motion.h1>
                         </div>
