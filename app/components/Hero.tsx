@@ -60,7 +60,7 @@ export default function Hero() {
                             <button className="group relative inline-flex items-center justify-center px-10 py-5 bg-emerald-600 text-white rounded-2xl font-bold text-xl transition-all duration-300 hover:bg-emerald-700 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 shadow-lg hover:shadow-xl overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-r from-emerald-700 to-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                 <Image
-                                    src="/images/app-store.png"
+                                    src= "./images/app-store.png"
                                     alt="App Store"
                                     width={32}
                                     height={32}
@@ -72,7 +72,7 @@ export default function Hero() {
                             <button className="group relative inline-flex items-center justify-center px-10 py-5 bg-white text-emerald-600 rounded-2xl font-bold text-xl transition-all duration-300 hover:bg-gray-100 hover:scale-[1.02] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 shadow-md overflow-hidden border border-emerald-200">
                                 <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                                 <Image
-                                    src="/images/google-play.svg"
+                                    src="./images/google-play.png"
                                     alt="Google Play"
                                     width={32}
                                     height={32}
