@@ -4,6 +4,9 @@ import { motion } from 'framer-motion';
 import { Leaf, Calculator, TrendingUp, QrCode } from 'lucide-react';
 import Image from 'next/image';
 
+import appStoreBadge from '@/public/images/app-store.png';
+import googlePlayBadge from '@/public/images/google-play.png';
+
 export default function Hero() {
     return (
         <section
@@ -51,10 +54,11 @@ export default function Hero() {
                                 className="flex items-center gap-3 px-6 py-4 rounded-2xl border border-emerald-200 bg-white text-gray-900 text-base font-medium shadow-sm transition hover:shadow"
                             >
                                 <Image
-                                    src="/images/app-store.png"
+                                    src={appStoreBadge}
                                     alt="Download on the App Store"
                                     width={28}
                                     height={28}
+                                    className="h-7 w-auto"
                                 />
                                 App Store
                             </a>
@@ -64,10 +68,11 @@ export default function Hero() {
                                 className="flex items-center gap-3 px-6 py-4 rounded-2xl border border-emerald-200 bg-white text-gray-900 text-base font-medium shadow-sm transition hover:shadow"
                             >
                                 <Image
-                                    src="/images/google-play.png"
+                                    src={googlePlayBadge}
                                     alt="Get it on Google Play"
                                     width={28}
                                     height={28}
+                                    className="h-7 w-auto"
                                 />
                                 Google Play
                             </a>
@@ -123,7 +128,7 @@ export default function Hero() {
                             >
                                 {/* Dark Phone Frame */}
                                 <div className="relative w-72 sm:w-80 h-[560px] sm:h-[600px] rounded-[3rem] bg-gradient-to-b from-black via-gray-900 to-gray-800 p-[14px] shadow-[0_24px_60px_-24px_rgba(0,0,0,0.45)]">
-                                    <div className="w-full h-full rounded-[2.6rem] overflow-hidden bg-white">
+                                    <div className="relative z-10 w-full h-full rounded-[2.3rem] overflow-hidden bg-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
 
                                         {/* Minimal Status Bar */}
                                         <div className="flex justify-between items-center px-6 py-4 border-b border-gray-100 bg-white">
@@ -145,7 +150,7 @@ export default function Hero() {
                                         <div className="p-6 space-y-6 bg-gray-50 h-full">
 
                                             {/* Carbon Persona Badge */}
-                                            <div className="flex items-center gap-4 bg-white rounded-3xl p-5 border border-gray-100 shadow-sm">
+                                            <div className="flex items-center gap-4 bg-white rounded-2xl p-5 border border-gray-100 shadow-sm">
                                                 <div className="w-14 h-14 bg-gradient-to-br from-emerald-600 to-emerald-500 rounded-2xl flex items-center justify-center shadow-lg">
                                                     <Leaf className="w-7 h-7 text-white" />
                                                 </div>
@@ -186,6 +191,15 @@ export default function Hero() {
                                                 </button>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div className="pointer-events-none absolute inset-x-0 top-6 flex justify-center z-20">
+                                        <div className="flex items-center gap-2">
+                                            <div className="w-24 h-2 rounded-full bg-gray-700/80" />
+                                            <div className="w-3 h-3 rounded-full bg-gray-600/90 border border-black/40" />
+                                        </div>
+                                    </div>
+                                    <div className="pointer-events-none absolute inset-x-0 bottom-4 flex justify-center z-20">
+                                        <div className="w-16 h-16 rounded-full border border-gray-600/60 bg-gradient-to-br from-gray-800 via-gray-900 to-black shadow-[inset_0_0_6px_rgba(0,0,0,0.6)]" />
                                     </div>
                                 </div>
 
