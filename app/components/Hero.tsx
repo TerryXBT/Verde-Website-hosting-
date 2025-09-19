@@ -127,8 +127,8 @@ export default function Hero() {
                                 className="relative"
                             >
                                 {/* Dark Phone Frame */}
-                                <div className="relative w-72 sm:w-80 h-[560px] sm:h-[600px] rounded-[3rem] bg-gradient-to-b from-black via-gray-900 to-gray-800 p-[14px] shadow-[0_24px_60px_-24px_rgba(0,0,0,0.45)]">
-                                    <div className="relative z-10 w-full h-full rounded-[2.3rem] overflow-hidden bg-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
+                                <div className="relative w-72 sm:w-80 h-[560px] sm:h-[600px] rounded-[2.8rem] bg-gradient-to-b from-black via-gray-900 to-gray-800 p-[10px] shadow-[0_24px_60px_-24px_rgba(0,0,0,0.45)]">
+                                    <div className="relative z-10 w-full h-full rounded-[2.1rem] overflow-hidden bg-white shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">
 
                                         {/* Minimal Status Bar */}
                                         <div className="flex justify-between items-center px-6 py-4 border-b border-gray-100 bg-white">
@@ -192,14 +192,11 @@ export default function Hero() {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="pointer-events-none absolute inset-x-0 top-6 flex justify-center z-20">
+                                    <div className="pointer-events-none absolute inset-x-0 top-4 flex justify-center z-20">
                                         <div className="flex items-center gap-2">
                                             <div className="w-24 h-2 rounded-full bg-gray-700/80" />
                                             <div className="w-3 h-3 rounded-full bg-gray-600/90 border border-black/40" />
                                         </div>
-                                    </div>
-                                    <div className="pointer-events-none absolute inset-x-0 bottom-4 flex justify-center z-20">
-                                        <div className="w-16 h-16 rounded-full border border-gray-600/60 bg-gradient-to-br from-gray-800 via-gray-900 to-black shadow-[inset_0_0_6px_rgba(0,0,0,0.6)]" />
                                     </div>
                                 </div>
 
