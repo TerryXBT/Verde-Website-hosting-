@@ -32,7 +32,7 @@ const stats = [
 
 export default function Features() {
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -43,9 +43,8 @@ export default function Features() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Three Steps to Your
-            <span className="text-emerald-600 bg-gradient-to-r from-emerald-600 to-emerald-500 bg-clip-text text-transparent"> Carbon Persona</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 mb-6">
+            Three Steps to Your Carbon Persona
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Transform your environmental impact with data-driven insights tailored for Melbourne living.
@@ -61,27 +60,22 @@ export default function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="group relative"
+              className="group"
             >
-              <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-emerald-200 h-full">
-                
+              <div className="bg-white rounded-3xl p-8 shadow-sm hover:shadow-md transition duration-300 border border-gray-200 h-full">
+
                 {/* Icon */}
-                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 bg-gradient-to-br ${
-                  feature.color === 'emerald' ? 'from-emerald-500 to-emerald-600' :
-                  feature.color === 'blue' ? 'from-blue-500 to-blue-600' :
-                  'from-purple-500 to-purple-600'
-                } shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                  <feature.icon className="w-8 h-8 text-white" />
+                <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 ${
+                  feature.color === 'emerald' ? 'bg-emerald-50 text-emerald-600' :
+                  feature.color === 'blue' ? 'bg-blue-50 text-blue-600' :
+                  'bg-purple-50 text-purple-600'
+                }`}>
+                  <feature.icon className="w-7 h-7" />
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{feature.description}</p>
-
-                {/* Step Number */}
-                <div className="absolute top-6 right-6 w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
-                  <span className="text-sm font-bold text-gray-600">{index + 1}</span>
-                </div>
               </div>
             </motion.div>
           ))}
@@ -93,18 +87,18 @@ export default function Features() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-gradient-to-r from-emerald-600 to-emerald-500 rounded-3xl p-8 sm:p-12"
+          className="bg-white rounded-3xl p-8 sm:p-12 border border-gray-200"
         >
           <div className="text-center mb-8">
-            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
+            <h3 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-4">
               Join Melbourne's Carbon Community
             </h3>
-            <p className="text-emerald-100 text-lg">
+            <p className="text-gray-600 text-lg">
               Real people making real impact across Victoria
             </p>
           </div>
 
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -114,11 +108,11 @@ export default function Features() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center"
               >
-                <div className="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-4 bg-emerald-50 text-emerald-600">
+                  <stat.icon className="w-6 h-6" />
                 </div>
-                <div className="text-3xl sm:text-4xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-emerald-100 font-medium">{stat.label}</div>
+                <div className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-2">{stat.value}</div>
+                <div className="text-gray-600 font-medium">{stat.label}</div>
               </motion.div>
             ))}
           </div>

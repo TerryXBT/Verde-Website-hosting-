@@ -7,19 +7,10 @@ import Image from 'next/image';
 export default function Hero() {
     return (
         <section
-            className="relative min-h-screen bg-gradient-to-br from-white via-gray-50 to-emerald-50/30 overflow-hidden"
+            className="relative overflow-hidden bg-white"
             aria-label="Verde Carbon Persona Hero Section"
         >
-            {/* Enhanced Background Elements */}
-            <div className="absolute inset-0 bg-gradient-radial from-emerald-100/20 via-transparent to-transparent" />
-
-            {/* Subtle Grid Pattern */}
-            <div className="absolute inset-0 opacity-[0.02]" style={{
-                backgroundImage: `radial-gradient(circle at 1px 1px, rgb(0,0,0) 1px, transparent 0)`,
-                backgroundSize: '40px 40px'
-            }} />
-
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 pb-16">
+            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
                 <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-[85vh]">
 
                     {/* Left Content */}
@@ -30,13 +21,11 @@ export default function Hero() {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6 }}
-                                className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight text-gray-900 leading-[1.1]"
+                                className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight text-gray-900 leading-tight"
                             >
                                 Your Carbon,
                                 <br />
-                                <span className="text-emerald-600 bg-gradient-to-r from-emerald-600 to-emerald-500 bg-clip-text text-transparent">
-                                    Your Verde.
-                                </span>
+                                <span className="text-emerald-600">Your Verde.</span>
                             </motion.h1>
                         </div>
 
@@ -55,31 +44,33 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
-                            className="flex flex-col sm:flex-row gap-4"
+                            className="flex flex-col sm:flex-row gap-3"
                         >
-                            <button className="group relative inline-flex items-center justify-center px-10 py-5 bg-emerald-600 text-white rounded-2xl font-bold text-xl transition-all duration-300 hover:bg-emerald-700 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 shadow-lg hover:shadow-xl overflow-hidden">
-                                <div className="absolute inset-0 bg-gradient-to-r from-emerald-700 to-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                            <a
+                                href="#"
+                                className="flex items-center gap-3 px-6 py-4 rounded-2xl border border-emerald-200 bg-white text-gray-900 text-base font-medium shadow-sm transition hover:shadow"
+                            >
                                 <Image
                                     src="/images/app-store.png"
-                                    alt="App Store"
-                                    width={32}
-                                    height={32}
-                                    className="mr-3 relative z-10"
+                                    alt="Download on the App Store"
+                                    width={28}
+                                    height={28}
                                 />
-                                <span className="relative z-10">App Store</span>
-                            </button>
+                                App Store
+                            </a>
 
-                            <button className="group relative inline-flex items-center justify-center px-10 py-5 bg-white text-emerald-600 rounded-2xl font-bold text-xl transition-all duration-300 hover:bg-gray-100 hover:scale-[1.02] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2 shadow-md overflow-hidden border border-emerald-200">
-                                <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                            <a
+                                href="#"
+                                className="flex items-center gap-3 px-6 py-4 rounded-2xl border border-emerald-200 bg-white text-gray-900 text-base font-medium shadow-sm transition hover:shadow"
+                            >
                                 <Image
                                     src="/images/google-play.png"
-                                    alt="Google Play"
-                                    width={32}
-                                    height={32}
-                                    className="mr-3 relative z-10"
+                                    alt="Get it on Google Play"
+                                    width={28}
+                                    height={28}
                                 />
-                                <span className="relative z-10">Google Play</span>
-                            </button>
+                                Google Play
+                            </a>
                         </motion.div>
 
                         {/* Enhanced QR Code Card */}
@@ -130,12 +121,12 @@ export default function Hero() {
                                 }}
                                 className="relative"
                             >
-                                {/* Enhanced Phone Frame */}
-                                <div className="relative w-72 sm:w-80 h-[580px] sm:h-[640px] bg-gradient-to-b from-gray-900 to-black rounded-[3rem] p-2 shadow-2xl ring-1 ring-white/10">
-                                    <div className="w-full h-full bg-gradient-to-b from-white to-gray-50 rounded-[2.5rem] overflow-hidden relative">
+                                {/* Dark Phone Frame */}
+                                <div className="relative w-72 sm:w-80 h-[560px] sm:h-[600px] rounded-[3rem] bg-gradient-to-b from-black via-gray-900 to-gray-800 p-[14px] shadow-[0_24px_60px_-24px_rgba(0,0,0,0.45)]">
+                                    <div className="w-full h-full rounded-[2.6rem] overflow-hidden bg-white">
 
-                                        {/* Enhanced Status Bar */}
-                                        <div className="flex justify-between items-center px-6 py-4 bg-gradient-to-r from-gray-50 to-white border-b border-gray-100">
+                                        {/* Minimal Status Bar */}
+                                        <div className="flex justify-between items-center px-6 py-4 border-b border-gray-100 bg-white">
                                             <span className="text-sm font-semibold text-gray-900">9:41</span>
                                             <div className="flex items-center gap-2">
                                                 <div className="flex gap-1">
@@ -151,10 +142,10 @@ export default function Hero() {
                                         </div>
 
                                         {/* App Content */}
-                                        <div className="p-6 space-y-6">
+                                        <div className="p-6 space-y-6 bg-gray-50 h-full">
 
-                                            {/* Enhanced Carbon Persona Badge */}
-                                            <div className="flex items-center gap-4 bg-gradient-to-r from-emerald-50 to-green-50 rounded-3xl p-5 border border-emerald-100 shadow-sm">
+                                            {/* Carbon Persona Badge */}
+                                            <div className="flex items-center gap-4 bg-white rounded-3xl p-5 border border-gray-100 shadow-sm">
                                                 <div className="w-14 h-14 bg-gradient-to-br from-emerald-600 to-emerald-500 rounded-2xl flex items-center justify-center shadow-lg">
                                                     <Leaf className="w-7 h-7 text-white" />
                                                 </div>

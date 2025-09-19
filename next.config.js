@@ -1,11 +1,13 @@
+const isProd = process.env.NODE_ENV === 'production';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
   images: {
-    domains: [],
+    unoptimized: true,
   },
-}
+  output: 'export',
+  basePath: isProd ? '/Verde-Website-hosting-' : '',
+  assetPrefix: isProd ? '/Verde-Website-hosting-' : '',
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
