@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Leaf, Calculator, TrendingUp, QrCode } from 'lucide-react';
+import { Leaf, Calculator, TrendingUp, QrCode, DownloadCloud } from 'lucide-react';
 import Image from 'next/image';
 
 import appStoreBadge from '@/public/images/app-store.png';
@@ -50,22 +50,16 @@ export default function Hero() {
                             className="flex flex-col sm:flex-row gap-3"
                         >
                             <a
-                                href="#"
-                                className="flex items-center gap-3 px-6 py-4 rounded-2xl border border-emerald-200 bg-white text-gray-900 text-base font-medium shadow-sm transition hover:shadow"
+                                href="https://github.com/Only-Bugs/Verde/releases"
+                                className="flex items-center gap-3 rounded-full bg-emerald-500 px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-emerald-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
                             >
-                                <Image
-                                    src={appStoreBadge}
-                                    alt="Download on the App Store"
-                                    width={28}
-                                    height={28}
-                                    className="h-7 w-auto"
-                                />
-                                App Store
+                                <DownloadCloud className="h-5 w-5" />
+                                Download the app
                             </a>
 
                             <a
                                 href="#"
-                                className="flex items-center gap-3 px-6 py-4 rounded-2xl border border-emerald-200 bg-white text-gray-900 text-base font-medium shadow-sm transition hover:shadow"
+                                className="hidden items-center gap-3 px-6 py-4 rounded-2xl border border-emerald-200 bg-white text-gray-900 text-base font-medium shadow-sm transition hover:shadow"
                             >
                                 <Image
                                     src={googlePlayBadge}
@@ -76,6 +70,20 @@ export default function Hero() {
                                 />
                                 Google Play
                             </a>
+
+                            <a
+                                href="#"
+                                className="hidden items-center gap-3 px-6 py-4 rounded-2xl border border-emerald-200 bg-white text-gray-900 text-base font-medium shadow-sm transition hover:shadow"
+                            >
+                                <Image
+                                    src={appStoreBadge}
+                                    alt="Download on the App Store"
+                                    width={28}
+                                    height={28}
+                                    className="h-7 w-auto"
+                                />
+                                App Store
+                            </a>
                         </motion.div>
 
                         {/* Enhanced QR Code Card */}
@@ -83,7 +91,7 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.3 }}
-                            className="inline-flex items-center gap-5 bg-white/95 backdrop-blur-md border border-gray-200 rounded-3xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] group cursor-pointer"
+                            className="hidden inline-flex items-center gap-5 bg-white/95 backdrop-blur-md border border-gray-200 rounded-3xl p-5 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] group cursor-pointer"
                         >
                             <div className="w-16 h-16 bg-gradient-to-br from-emerald-100 to-emerald-50 rounded-2xl flex items-center justify-center border border-emerald-200 group-hover:border-emerald-300 transition-colors duration-300">
                                 <QrCode className="w-8 h-8 text-emerald-600 group-hover:text-emerald-700 transition-colors duration-300" />
