@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Calculator, TrendingUp, Target, Leaf, Users, Award } from 'lucide-react';
+import { Calculator, TrendingUp, Target } from 'lucide-react';
 
 const features = [
   {
@@ -22,12 +22,6 @@ const features = [
     description: "Create personalized reduction targets and track your progress over time.",
     color: "purple"
   }
-];
-
-const stats = [
-  { icon: Users, value: "10,000+", label: "Active Users" },
-  { icon: Leaf, value: "2.3M", label: "Tonnes Tracked" },
-  { icon: Award, value: "35%", label: "Avg. Reduction" }
 ];
 
 export default function Features() {
@@ -81,42 +75,6 @@ export default function Features() {
           ))}
         </div>
 
-        {/* Stats Section */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="bg-white rounded-3xl p-8 sm:p-12 border border-gray-200"
-        >
-          <div className="text-center mb-8">
-            <h3 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-4">
-              Join Melbourne's Carbon Community
-            </h3>
-            <p className="text-gray-600 text-lg">
-              Real people making real impact across Victoria
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-4 bg-emerald-50 text-emerald-600">
-                  <stat.icon className="w-6 h-6" />
-                </div>
-                <div className="text-3xl sm:text-4xl font-semibold text-gray-900 mb-2">{stat.value}</div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );

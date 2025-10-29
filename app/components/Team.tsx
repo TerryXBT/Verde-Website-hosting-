@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import {
-    Leaf,
     Laptop2,
     Puzzle,
     PenTool,
@@ -130,7 +129,7 @@ const teamMembers: TeamMember[] = [
         name: 'Chenwei (Yoyo) Ma',
         role: 'UX/UI Specialist • Content Specialist',
         description:
-            'I focus on our user lens through market analysis and product direction. I translate requirements into UI design and partner with frontend developers to clarify epics, acceptance criteria, and delivery. I led the early research and continue to explore the experience with players and books for inspiration.',
+            'I focus on our user lens through market analysis and product direction. I translate requirements into UI design and partner with frontend developers to clarify epics, acceptance criteria, and delivery.',
         focus: 'Figma, Adobe XD, Miro, Canva, Google Workspace.',
         icon: Palette,
         socials: [
@@ -150,7 +149,7 @@ const teamMembers: TeamMember[] = [
         name: 'Harine Mohanram',
         role: 'Data Scientist',
         description:
-            'I enjoy turning raw information into insight through modelling, validation, and precise documentation. I am driven by curiosity, clear problem solving, and responsible data practice with a constant appetite for learning.',
+            'I transform raw information into insight through modelling, validation, and precise documentation. Curiosity, clear problem solving, and responsible data practice keep me exploring.',
         focus: 'SQL, Python, PySpark ML, R, Data modelling, Analytics, Testing.',
         icon: BarChart3,
         socials: [
@@ -200,57 +199,39 @@ export default function Team() {
             <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-gray-100/80 to-transparent" />
 
             <div className="relative mx-auto max-w-6xl px-4 py-24 sm:px-6 lg:px-8">
-                <div className="max-w-3xl">
-                    <div className="flex flex-col gap-6 sm:flex-row sm:items-center">
-                        <div className="space-y-6">
-                            <div>
-                                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600">
-                                    Team Verde
-                                </p>
-                                <h1
-                                    id="team-title"
-                                    className="mt-2 text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl"
-                                >
-                                    Meet the people behind Verde
-                                </h1>
-                                <p className="mt-4 text-base leading-relaxed text-gray-600 sm:text-lg">
-                                    Verde helps urban professionals turn
-                                    awareness into action with trackable,
-                                    beautiful tools. Our cross-disciplinary team
-                                    pairs climate empathy with rigorous systems
-                                    thinking so the product feels trustworthy
-                                    and inspiring.
-                                </p>
-                            </div>
-
-                            <div className="flex flex-wrap items-center gap-3">
-                                <button
-                                    type="button"
-                                    onClick={() =>
-                                        setShowDetails((prev) => !prev)
-                                    }
-                                    className="inline-flex items-center justify-center rounded-full border border-emerald-500 px-5 py-2 text-sm font-medium text-emerald-600 transition hover:bg-emerald-500 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
-                                    aria-expanded={showDetails}
-                                >
-                                    {showDetails ? 'Show less' : 'Learn more'}
-                                </button>
-
-                                <a
-                                    href="https://github.com/Only-Bugs/Verde/releases"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="inline-flex items-center justify-center rounded-full bg-emerald-500 px-5 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-emerald-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
-                                >
-                                    Download the app
-                                </a>
-                            </div>
-                        </div>
+                <div className="max-w-3xl space-y-6">
+                    <div>
+                        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-600">
+                            Team Verde
+                        </p>
+                        <h1
+                            id="team-title"
+                            className="mt-2 text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl"
+                        >
+                            Meet the people behind Verde
+                        </h1>
+                        <p className="mt-4 text-base leading-relaxed text-gray-600 sm:text-lg">
+                            Verde helps urban professionals turn awareness into
+                            action with trackable, beautiful tools. Our
+                            cross-disciplinary team pairs climate empathy with
+                            rigorous systems thinking so the product feels both
+                            trustworthy and inspiring.
+                        </p>
                     </div>
+
+                    <button
+                        type="button"
+                        onClick={() => setShowDetails((prev) => !prev)}
+                        className="inline-flex items-center justify-center rounded-full border border-emerald-500 px-5 py-2 text-sm font-medium text-emerald-600 transition hover:bg-emerald-500 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2"
+                        aria-expanded={showDetails}
+                    >
+                        {showDetails ? 'Show less' : 'Learn more'}
+                    </button>
 
                     <div
                         className={`overflow-hidden transition-all duration-500 ease-in-out ${
                             showDetails
-                                ? 'mt-8 max-h-[1200px] opacity-100'
+                                ? 'max-h-[1200px] opacity-100'
                                 : 'max-h-0 opacity-0'
                         }`}
                     >
@@ -262,8 +243,8 @@ export default function Team() {
                                 <p className="mt-3 text-base leading-relaxed text-gray-600">
                                     Verde bridges the gap between climate
                                     intention and everyday behaviour. By
-                                    visualising emissions data as growth in your
-                                    carbon persona, it keeps sustainability
+                                    visualising emissions data as the growth of
+                                    your carbon persona, it keeps sustainability
                                     engaging through milestones, challenges, and
                                     community rewards.
                                 </p>
@@ -273,11 +254,12 @@ export default function Team() {
                                     Who we design for
                                 </h2>
                                 <p className="mt-3 text-base leading-relaxed text-gray-600">
-                                    Digital-first professionals who care about
-                                    the planet and want clear, beautiful tools
-                                    to act consistently. Verde offers a personal
-                                    sustainability journey that stays
-                                    measurable, social, and motivating.
+                                    We build for digital-first professionals who
+                                    care about the planet and want clear,
+                                    beautiful ways to act consistently. Verde
+                                    offers a personal sustainability journey
+                                    that remains measurable, social, and
+                                    motivating.
                                 </p>
                             </div>
                         </div>
